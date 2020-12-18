@@ -5,11 +5,20 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start -p 4000"
   },
   "dependencies": {
+    "@chec/commerce.js": "^2.2.0",
+    "autoprefixer": "^10.0.4",
+    "lodash": "^4.17.20",
     "next": "10.0.3",
+    "next-react-svg": "^1.1.2",
+    "postcss": "^8.1.14",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "react-icons": "^4.1.0",
+    "tailwindcss": "^2.0.1",
+    "unsplash-js": "^7.0.1",
+    "use-callback-ref": "^1.2.4"
   }
 }
