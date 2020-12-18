@@ -3,7 +3,7 @@ import unsplash from '../lib/unsplash';
 export async function getImage(query) {
    const res = await unsplash.search.getPhotos({ 
       query, 
-      orientation: 'squarish',
+      orientation: 'landscape',
       perPage: 1,
       contentFilter: 'low',
       orderBy: 'relevant'

@@ -21,9 +21,9 @@ const navItems = [
    { title: 'Contact Us', path: "/contact"  },
 ]
 
-function Navbar({ categories }) {
-   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+function Navbar() {
    const router = useRouter();
+   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
    const { itemsCount } = useContext(cartContext);
    const { loadingOnPageChange } = useContext(globalContext);
 
@@ -44,27 +44,29 @@ function Navbar({ categories }) {
                childClassName="mx-4 my-2 text-xl mt-4"
             />
          </Drawer>
-         <nav className="flex container max-w-full sticky top-0 z-10 py-5 sm:px-16 px-7 bg-secondary">
+         <nav className="flex container max-w-full sticky top-0 z-10 py-4 sm:px-16 px-7 bg-secondary">
             <Link href="/">
-               <h1 className="cursor-pointer">e-Commerce</h1>
+               <div className="flex justify-center items-center">
+                  <h1 className="cursor-pointer text-base md:text-2xl">e-Commerce</h1>
+               </div>
             </Link>
 
             <div className="flex justify-between items-center ml-16">
                <NavItems 
                   navItems={navItems} 
                   className="hidden lg:flex" 
-                  childClassName="mx-2 my-2 text-xl"
+                  childClassName="mx-2 my-1 text-lg"
                />
 
 
                <IconsTray className="absolute right-16">
-                  {loadingOnPageChange && <Loader className="mr-1 sm:mr-4" />}
+                  {/* {loadingOnPageChange && <Loader className="mr-1 sm:mr-4" />} */}
 
                   <BadgeIcon badge={10}>
-                     <BsHeartFill size={28} />
+                     <BsHeartFill size={21} />
                   </BadgeIcon>
                   <BadgeIcon badge={itemsCount}>
-                     <FaShoppingCart size={30}  onClick={() => router.push("/cart")} />
+                     <FaShoppingCart size={22}  onClick={() => router.push("/cart")} />
                   </BadgeIcon>
                </IconsTray>
                

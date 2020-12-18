@@ -53,6 +53,10 @@
   -webkit-tap-highlight-color: transparent;
 }
 
+html {
+  font-size: 80%;
+}
+
 .scrollbar-hidden::-webkit-scrollbar {
   display: none;
   width: 0;
@@ -67,8 +71,8 @@
   background-size: cover;
   background-image: linear-gradient(
       to right bottom,
-      rgba(12, 19, 12, 0.568),
-      rgba(30, 31, 30, 0.438)
+      rgba(12, 19, 12, 0.712),
+      rgba(30, 31, 30, 0.678)
     ),
     url("/hero4.jpg");
   position: relative;

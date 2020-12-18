@@ -10,8 +10,10 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-         <link rel="preconnect" href="https://fonts.gstatic.com" />
-         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+          <link rel="preconnect" href="https://fonts.gstatic.com" />
+          <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet" />
+            {/* Import CSS for nprogress */}
+          <link rel="stylesheet" type="text/css" href="/nprogress.css" />
         </Head>
         <body>
           <Main />

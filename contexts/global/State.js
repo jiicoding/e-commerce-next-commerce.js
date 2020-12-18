@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useReducer } from 'react'
 import { useRouter } from 'next/router'
 
+import NProgress from 'nprogress';
 import Context from './context';
 import Reducer from './reducer';
 import { 
@@ -22,10 +23,12 @@ export default function GlobalState({ children, props: { categories } }) {
    function routeEvents() {
       router.events.on('routeChangeStart', () => {
          handleOnChangeLoadingOnPageChange(true);
+         NProgress.start();
       })
 
       router.events.on('routeChangeComplete', () => {
          handleOnChangeLoadingOnPageChange(false);
+         NProgress.done();
       });
    } 
 
